@@ -1,0 +1,54 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Buscar libros
+
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+		{{source('publico/css/buscar.css',  ignore_missing = true)}}</style>
+
+{% endblock %}
+
+{% block body %}
+
+	{% block main %}
+
+
+		<div>
+			<h1>Buscar
+				{{tituloH1}}</h1>
+
+		</div>
+		<section>
+			<div>
+				<form id="formulario" autocomplete="off">
+					<label for="textoBuscar">{{tituloH1}}
+						a buscar</label>
+
+					<p><input type="text" name="textoBuscar" id="textoBuscar" placeholder="{{placeholder}}...." required></p>
+
+					<span id="mostrarMensaje"></span>
+
+					<p><input type="button" id="{{botonBuscar}}" value="buscar"></p>
+
+				</form>
+
+			</div>
+
+			<div id="resultado"></div>
+		</section>
+
+
+	{% endblock %}
+	{% block javascripts %}
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+		<script>{{ source('publico/js/jsBuscar.js', ignore_missing = true) }}</script>
+
+
+	{% endblock %}
+
+{% endblock %}

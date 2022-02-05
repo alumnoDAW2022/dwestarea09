@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}Bienvenid@ a Librolandia!
+			{% endblock %}
+		</title>
+		<style>{{source('publico/css/base.css',  ignore_missing = true)}}</style>
+
+		{% block stylesheets %}{% endblock %}
+
+
+	</head>
+	<body>
+
+		<nav>
+
+			<ul>
+				<li>
+					<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/autores.php?action=get_lista_autores">Autores</a>
+
+
+				</li>
+
+				<li>
+					<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/libros.php?action=get_lista_libros">Libros</a>
+
+
+				</li>
+				<li>
+					<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/libros.php?action=get_titulos_libros">Buscar libros</a>
+
+				</li>
+				<li>
+					<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/autores.php?action=get_autores_por">Buscar autores</a>
+
+
+				</li>
+
+
+				{# 				<li>
+																	<a href="http://localhost:3001/LibreriaT9/autores.php?action=get_lista_autores">Autores</a>
+																</li>
+												
+												
+																<li>
+																	<a href="http://localhost:3001/LibreriaT9/libros.php?action=get_lista_libros">Libros</a>
+																</li>
+												
+																<li>
+																	<a href="http://localhost:3001/LibreriaT9/libros.php?action=get_titulos_libros">Buscar libros</a>
+																</li>
+																<li>
+																	<a href="http://localhost:3001/LibreriaT9/autores.php?action=get_autores_por">Buscar autores</a>
+												
+																</li> #}
+
+
+			</ul>
+
+
+		</nav>
+
+
+		{% block body %}
+
+
+			{% block main %}{% endblock %}
+
+			{% block javascripts %}{% endblock %}
+
+		{% endblock %}
+
+
+		<!-- footer -->
+		<footer>
+			<p>Trabajo realizado para DWES Tarea09</p>
+		</footer>
+
+
+	</body>
+</html>

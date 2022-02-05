@@ -1,0 +1,19 @@
+#resultado {
+    border-radius: 12px;
+    border: solid 3px rgb(128, 0, 0);
+    min-width: 180px;
+    max-width: max-content;
+    max-height: max-content;
+    min-height: 50px;
+    padding: 8px;
+}
+
+form input[type=text] {
+    padding: 12px 12px;
+    border: none;
+    background-color: rgb(250, 124, 124);
+}
+
+th {
+    border-bottom: 1px solid rgb(100, 74, 74);
+}

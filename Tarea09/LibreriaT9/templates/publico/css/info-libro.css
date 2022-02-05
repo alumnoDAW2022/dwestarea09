@@ -1,0 +1,10 @@
+    #image img {
+        border-radius: 5px;
+        box-shadow: grey 2px 3px 3px;
+        width: 250px;
+    }
+    
+    #image img:hover {
+        transform: scale(1.1);
+        transition-duration: 2s;
+    }

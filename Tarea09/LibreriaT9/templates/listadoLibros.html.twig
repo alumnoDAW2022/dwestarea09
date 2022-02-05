@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Listado libros
+
+{% endblock %}
+{% block main %}
+
+	<section>
+		<div>
+			<h1>Listado completo de libros</h1>
+		</div>
+		<div id="listado-completo">
+			<ul>
+				{% for elemento in lista|sort((a, b) => a.titulo <=> b.titulo) %}
+
+
+					<li>
+						<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/libros.php?action=get_datos_libro&id={{ elemento.id }}">
+
+
+							{{elemento.titulo}}
+							{{elemento.f_publicacion}}
+
+
+						</a>
+
+					</li>
+
+				{% endfor %}
+			</ul>
+
+		</div>
+	</section>
+
+
+{% endblock %}

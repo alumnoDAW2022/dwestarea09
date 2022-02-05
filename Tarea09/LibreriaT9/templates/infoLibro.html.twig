@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Datos libro
+
+{% endblock %}
+{% block stylesheets %}
+
+	<style>
+		{{source('publico/css/info-libro.css',  ignore_missing = true)}}</style>
+
+{% endblock %}
+
+
+{% block main %}
+
+	<h1>Título:
+		{{ libro.titulo }}</h1>
+
+	<section>
+		<div id="datos-libro">
+
+
+			<h4>Fecha de publicación:
+				{{ libro.f_publicacion }}</h4>
+
+			<h4>Autor:
+				<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/autores.php?action=get_datos_autor&id={{libro.id_autor}}">
+
+
+					{{ libro.autor }}
+				</a>
+			</h4>
+
+
+		</div>
+		<div id="image">
+			<img src="https://dwestarea06.000webhostapp.com/api/img/{{libro.ruta_portada}}" alt="portada del libro {{ libro.titulo }}">
+		</div>
+
+
+	</section>
+
+
+{% endblock %}

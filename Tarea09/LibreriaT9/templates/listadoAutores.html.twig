@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Listado autores
+
+{% endblock %}
+{% block main %}
+
+	<section>
+		<div>
+			<h1>Lista de autores</h1>
+		</div>
+		<div id="listado-completo">
+			<ul>
+				{% for elemento in lista|sort((a, b) => a.nombre <=> b.nombre) %}
+
+					<li>
+						<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/autores.php?action=get_datos_autor&id={{ elemento.id }}">
+
+
+							{{elemento.nombre}}
+							{{elemento.apellidos}}
+
+						</a>
+
+					</li>
+
+				{% endfor %}
+			</ul>
+
+		</div>
+	</section>
+
+
+{% endblock %}

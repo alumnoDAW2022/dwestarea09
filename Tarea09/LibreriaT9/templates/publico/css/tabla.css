@@ -1,0 +1,44 @@
+    table {
+        border-collapse: collapse;
+        padding: 2em;
+        border: cadetblue 3px solid;
+        border-radius: 5px;
+        margin: 15px;
+    }
+    
+    caption {
+        caption-side: bottom;
+        text-align: start;
+        margin-top: 3px;
+    }
+    
+    td,
+    th {
+        border: 1px solid #444;
+        text-align: left;
+    }
+    
+    th {
+        padding: 5px 8px;
+    }
+    
+    td a {
+        box-sizing: border-box;
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        padding: 15px 8px;
+    }
+    
+    td a:hover {
+        background-color: #444;
+        color: aliceblue;
+    }
+    
+    table td+td {
+        padding: 15px 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }

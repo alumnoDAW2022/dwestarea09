@@ -1,0 +1,72 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Datos autor
+
+{% endblock %}
+
+{% block stylesheets %}
+
+	<style>
+		{{source('publico/css/tabla.css',  ignore_missing = true)}}</style>
+
+{% endblock %}
+
+
+{% block main %}
+
+	<h1>
+
+		{{ autor.nombre}}
+		{{ autor.apellidos}}
+
+	</h1>
+
+	<section>
+		<div id="datos-autor">
+
+			<p>Nacionalidad:
+				{{ autor.nacionalidad}}</p>
+
+		</div>
+		<div id="listado-libros-autor">
+			<table>
+				<caption>Total libros:
+					{{ libros|length }}
+				</caption>
+
+				<thead>
+					<tr>
+
+						<th>Título</th>
+						<th>Fecha Publicación</th>
+					</tr>
+				</thead>
+				{% for dato in libros %}
+
+
+					<tr>
+						<td>
+							<a href="http://dwes-foc.byethost3.com/tarea09/LibreriaT9/libros.php?action=get_datos_libro&id={{dato.id}}">
+
+
+								{{ dato.titulo }}
+							</a>
+						</td>
+
+
+						<td>{{ dato.f_publicacion }}</td>
+
+
+					</tr>
+
+
+				{% endfor %}
+
+
+			</table>
+
+		</div>
+	</section>
+
+
+{% endblock %}
